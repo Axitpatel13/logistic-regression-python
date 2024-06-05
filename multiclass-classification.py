@@ -1,23 +1,3 @@
-The example provided is for binary classification, where we predict whether a house price is above or below a specified threshold (e.g., $300,000). This results in two classes: one representing house prices below the threshold (class 0) and the other representing house prices above the threshold (class 1).
-
-### Binary Classification Explanation
-
-In binary classification, the target variable has two possible outcomes:
-
-- **Class 0**: House price is below the threshold.
-- **Class 1**: House price is above the threshold.
-
-This type of classification is suitable for problems where the goal is to categorize data into one of two distinct groups.
-
-### Multiclass Classification Explanation
-
-If your problem involves predicting multiple categories, such as different price ranges (e.g., low, medium, high), then you would be dealing with a multiclass classification problem. In multiclass classification, the target variable can have more than two outcomes.
-
-### Example for Binary Classification
-
-Using the provided example, here is a binary classification setup where we classify whether a house price is above or below $300,000:
-
-```python
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -164,6 +144,3 @@ new_predictions_proba = model.predict_proba(new_data)
 
 print("New Data Predictions (0 = low, 1 = medium, 2 = high):", new_predictions)
 print("New Data Prediction Probabilities:\n", new_predictions_proba)
-```
-
-This example uses the `multinomial` option in the `LogisticRegression` model to handle multiple classes.
